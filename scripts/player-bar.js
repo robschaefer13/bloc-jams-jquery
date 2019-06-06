@@ -1,16 +1,8 @@
-<<<<<<< HEAD
- {
-   $('button#play-pause').on('click', function() {
-     player.playPause();
-     $(this).attr('playState', player.playState);
-   });
-=======
 {
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
   });
->>>>>>> checkpoint-11-BlocJams-Sliders
 
   $('button#next').on('click', function() {
     if (player.playState !== 'playing') { return; }
@@ -20,26 +12,13 @@
     if (nextSongIndex >= album.songs.length) { return; }
 
     const nextSong = album.songs[nextSongIndex];
-<<<<<<< HEAD
-    player.playPause(nextSong);
-=======
     helper.playPauseAndUpdate(nextSong);
->>>>>>> checkpoint-11-BlocJams-Sliders
   });
 
   $('button#previous').on('click', function() {
     if (player.playState !== 'playing') { return; }
 
     const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
-<<<<<<< HEAD
-    const previousSongIndex = currentSongIndex - 1;
-    if (previousSongIndex < 0) { return; }
-
-    const previousSong = album.songs[previousSongIndex];
-    player.playPause(previousSong);
-  });
- }
-=======
     const prevSongIndex = currentSongIndex - 1;
     if (prevSongIndex < 0) { return; }
 
@@ -65,4 +44,3 @@
   });
 
 }
->>>>>>> checkpoint-11-BlocJams-Sliders

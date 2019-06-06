@@ -12,5 +12,3 @@ class Helper {
     player.playPause(song);
   }
 };
-
-const helper = new Helper();
